@@ -77,10 +77,12 @@ namespace iMobileDevice.DiagnosticsRelay
         /// <param name="context">
         /// The <see cref="System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.
         /// </param>
+#if !NETSTANDARD1_5
         protected DiagnosticsRelayException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context)
         {
         }
+#endif
         
         /// <summary>
         /// Gets the error code that represents the error.

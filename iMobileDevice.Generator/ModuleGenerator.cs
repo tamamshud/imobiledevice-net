@@ -18,6 +18,7 @@ namespace iMobileDevice.Generator
     using System.Runtime.ConstrainedExecution;
 #endif
     using CodeDom;
+    using System.Runtime.Serialization;
     internal class ModuleGenerator
     {
         public string Name
@@ -321,6 +322,15 @@ namespace iMobileDevice.Generator
                             {
                                 writer.WriteLine("#if !NETSTANDARD1_5");
                                 writer.WriteLine(line);
+                                writer.WriteLine("#endif");
+                            }
+                            else if (line.Contains("SerializationInfo info"))
+                            {
+                                writer.WriteLine("#if !NETSTANDARD1_5");
+                                writer.WriteLine(line);
+                                writer.WriteLine(reader.ReadLine());
+                                writer.WriteLine(reader.ReadLine());
+                                writer.WriteLine(reader.ReadLine());
                                 writer.WriteLine("#endif");
                             }
                             else
