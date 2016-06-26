@@ -67,7 +67,7 @@ namespace iMobileDevice.iDevice
         /// IDEVICE_E_SUCCESS on success or an error value when an error occured.
         /// </returns>
         [System.Runtime.InteropServices.DllImportAttribute(iDeviceNativeMethods.libraryName, EntryPoint="idevice_get_device_list", CallingConvention=System.Runtime.InteropServices.CallingConvention.Cdecl)]
-        public static extern iDeviceError idevice_get_device_list([System.Runtime.InteropServices.MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.CustomMarshaler, MarshalTypeRef=typeof(iDeviceListMarshaler))] out System.Collections.ObjectModel.ReadOnlyCollection<string> devices, ref int count);
+        public static extern iDeviceError idevice_get_device_list(out System.IntPtr devices, ref int count);
         
         /// <summary>
         /// Free a list of device udids.
@@ -256,6 +256,6 @@ namespace iMobileDevice.iDevice
         /// Gets the unique id for the device.
         /// </summary>
         [System.Runtime.InteropServices.DllImportAttribute(iDeviceNativeMethods.libraryName, EntryPoint="idevice_get_udid", CallingConvention=System.Runtime.InteropServices.CallingConvention.Cdecl)]
-        public static extern iDeviceError idevice_get_udid(iDeviceHandle device, [System.Runtime.InteropServices.MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.CustomMarshaler, MarshalTypeRef=typeof(NativeStringMarshaler))] out string udid);
+        public static extern iDeviceError idevice_get_udid(iDeviceHandle device, out System.IntPtr udid);
     }
 }

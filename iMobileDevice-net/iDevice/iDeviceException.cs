@@ -13,7 +13,9 @@ namespace iMobileDevice.iDevice
     
     
     /// Represents an exception that occurred when interacting with the iDevice API.
+#if !NETSTANDARD1_5
     [System.SerializableAttribute()]
+#endif
     public class iDeviceException : System.Exception
     {
         
