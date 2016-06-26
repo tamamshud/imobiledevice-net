@@ -13,8 +13,10 @@ namespace iMobileDevice.Generator
     using System.Linq;
     using ClangSharp;
     using System.Diagnostics;
+#if !NETSTANDARD1_5
     using System.Security.Permissions;
     using System.Runtime.ConstrainedExecution;
+#endif
     using CodeDom;
     internal class ModuleGenerator
     {
