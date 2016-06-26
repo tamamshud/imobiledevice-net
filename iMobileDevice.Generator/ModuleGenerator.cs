@@ -15,7 +15,7 @@ namespace iMobileDevice.Generator
     using System.Diagnostics;
     using System.Security.Permissions;
     using System.Runtime.ConstrainedExecution;
-
+    using CodeDom;
     internal class ModuleGenerator
     {
         public string Name
