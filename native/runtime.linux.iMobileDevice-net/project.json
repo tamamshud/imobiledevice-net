@@ -19,12 +19,7 @@
     "tags": [ "libimobiledevice", "ios", "iphone", "ipad", "imobiledevice", "netcore" ],
     "files": {
       "mappings": {
-        "runtimes/ubuntu.14.04-x64/native/libimobiledevice.so": "out/usr/local/lib/libimobiledevice.so.6.0.0",
-        "runtimes/ubuntu.14.04-x64/native/libplist.so": "out/usr/local/lib/libplist.so.3.0.0",
-        "runtimes/ubuntu.14.04-x64/native/libusbmuxd.so": "out/usr/local/lib/libusbmuxd.so.4.0.0",
-        "runtimes/ubuntu.14.04-x64/native/libimobiledevice.so.6.0.0": "out/usr/local/lib/libimobiledevice.so.6.0.0",
-        "runtimes/ubuntu.14.04-x64/native/libusbmuxd.so.4.0.0": "out/usr/local/lib/libusbmuxd.so.4.0.0",
-        "runtimes/ubuntu.14.04-x64/native/libplist.so.3.0.0": "out/usr/local/lib/libplist.so.3.0.0",
+        "runtimes/ubuntu.14.04-x64/native/libimobiledevice.so": "out/usr/local/lib/libimobiledevice.so"
       }
     }
   },
