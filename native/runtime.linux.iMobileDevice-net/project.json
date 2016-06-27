@@ -19,7 +19,7 @@
     "tags": [ "libimobiledevice", "ios", "iphone", "ipad", "imobiledevice", "netcore" ],
     "files": {
       "mappings": {
-        "runtimes/ubuntu.14.04-x64/native/libimobiledevice.so": "out/usr/local/lib/libimobiledevice.so"
+        "runtimes/debian.8-x64/native/libimobiledevice.so": "out/usr/local/lib/libimobiledevice.so"
       }
     }
   },
