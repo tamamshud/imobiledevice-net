@@ -103,7 +103,7 @@ namespace iMobileDevice.Plist
         /// the created item
         /// </returns>
         [System.Runtime.InteropServices.DllImportAttribute(PlistNativeMethods.libraryName, EntryPoint="plist_new_data", CallingConvention=System.Runtime.InteropServices.CallingConvention.Cdecl)]
-        public static extern PlistHandle plist_new_data([System.Runtime.InteropServices.MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.LPStr)] string val, ulong length);
+        public static extern PlistHandle plist_new_data(byte[] val, ulong length);
         
         /// <summary>
         /// Create a new plist_t type #PLIST_DATE
@@ -665,7 +665,7 @@ namespace iMobileDevice.Plist
         /// a pointer to an uint32_t variable. Represents the length of the allocated buffer.
         /// </param>
         [System.Runtime.InteropServices.DllImportAttribute(PlistNativeMethods.libraryName, EntryPoint="plist_to_bin", CallingConvention=System.Runtime.InteropServices.CallingConvention.Cdecl)]
-        public static extern void plist_to_bin(PlistHandle plist, [System.Runtime.InteropServices.MarshalAsAttribute(System.Runtime.InteropServices.UnmanagedType.CustomMarshaler, MarshalTypeRef=typeof(NativeStringMarshaler))] out string plistBin, ref uint length);
+        public static extern void plist_to_bin(PlistHandle plist, out byte[] plistBin, ref uint length);
         
         /// <summary>
         /// Frees the memory allocated by plist_to_bin

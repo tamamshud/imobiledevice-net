@@ -114,7 +114,7 @@ namespace iMobileDevice.Plist
         /// <returns>
         /// the created item
         /// </returns>
-        public virtual PlistHandle plist_new_data(string val, ulong length)
+        public virtual PlistHandle plist_new_data(byte[] val, ulong length)
         {
             return PlistNativeMethods.plist_new_data(val, length);
         }
@@ -758,7 +758,7 @@ namespace iMobileDevice.Plist
         /// <param name="length">
         /// a pointer to an uint32_t variable. Represents the length of the allocated buffer.
         /// </param>
-        public virtual void plist_to_bin(PlistHandle plist, out string plistBin, ref uint length)
+        public virtual void plist_to_bin(PlistHandle plist, out byte[] plistBin, ref uint length)
         {
             PlistNativeMethods.plist_to_bin(plist, out plistBin, ref length);
         }

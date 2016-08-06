@@ -93,7 +93,7 @@ namespace iMobileDevice.Plist
         /// <returns>
         /// the created item
         /// </returns>
-        PlistHandle plist_new_data(string val, ulong length);
+        PlistHandle plist_new_data(byte[] val, ulong length);
         
         /// <summary>
         /// Create a new plist_t type #PLIST_DATE
@@ -614,7 +614,7 @@ namespace iMobileDevice.Plist
         /// <param name="length">
         /// a pointer to an uint32_t variable. Represents the length of the allocated buffer.
         /// </param>
-        void plist_to_bin(PlistHandle plist, out string plistBin, ref uint length);
+        void plist_to_bin(PlistHandle plist, out byte[] plistBin, ref uint length);
         
         /// <summary>
         /// Frees the memory allocated by plist_to_bin
