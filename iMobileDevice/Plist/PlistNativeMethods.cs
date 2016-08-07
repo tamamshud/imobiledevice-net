@@ -4,6 +4,7 @@
 
 namespace iMobileDevice.Plist
 {
+    using System;
     using System.Runtime.InteropServices;
     using System.Diagnostics;
     using iMobileDevice.iDevice;
@@ -665,7 +666,7 @@ namespace iMobileDevice.Plist
         /// a pointer to an uint32_t variable. Represents the length of the allocated buffer.
         /// </param>
         [System.Runtime.InteropServices.DllImportAttribute(PlistNativeMethods.libraryName, EntryPoint="plist_to_bin", CallingConvention=System.Runtime.InteropServices.CallingConvention.Cdecl)]
-        public static extern void plist_to_bin(PlistHandle plist, out byte[] plistBin, ref uint length);
+        public static extern void plist_to_bin(PlistHandle plist, out IntPtr plistBin, ref uint length);
         
         /// <summary>
         /// Frees the memory allocated by plist_to_bin

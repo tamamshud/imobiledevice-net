@@ -4,6 +4,7 @@
 
 namespace iMobileDevice.Plist
 {
+    using System;
     using System.Runtime.InteropServices;
     using System.Diagnostics;
     using iMobileDevice.iDevice;
@@ -760,9 +761,16 @@ namespace iMobileDevice.Plist
         /// </param>
         public virtual void plist_to_bin(PlistHandle plist, out byte[] plistBin, ref uint length)
         {
-            PlistNativeMethods.plist_to_bin(plist, out plistBin, ref length);
+            IntPtr buffer;
+            PlistNativeMethods.plist_to_bin(plist, out buffer, ref length);
+
+            plistBin = new byte[length];
+            Marshal.Copy(buffer, plistBin, 0, (int)length);
+
+            plist_to_bin_free(buffer);
         }
-        
+
+
         /// <summary>
         /// Frees the memory allocated by plist_to_bin
         /// </summary>
